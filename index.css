@@ -180,3 +180,34 @@ button:hover {
   background: linear-gradient(to right, rgb(224, 81, 114), var(--clr-error));
   cursor: pointer;
 }
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  min-height: 100dvh;
+  background-color: var(--clr-white);
+}
+
+.success-message img {
+  max-width: 55px;
+}
+
+.success-message button {
+  margin-top: auto;
+}
+
+@media (width>650px) {
+  .success-message {
+    width: 400px;
+    min-height: auto;
+    padding: 2.5rem;
+    border-radius: 30px;
+  }
+
+  .success-message h1 {
+    line-height: 1.65ch;
+  }
+}
