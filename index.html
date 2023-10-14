@@ -8,6 +8,8 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <link rel="stylesheet" href="./index.css">
   <script src="./index.js" defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
 </head>
 
 <body>
@@ -42,7 +44,7 @@
         <div class="error">valid email required</div>
       </div>
 
-      <button>
+      <button onclick="sendEmail()">
         Subscribe to monthly newsletter
       </button>
     </div>
@@ -58,7 +60,7 @@
       Please open it and click the button inside to confirm your subscription.
     </p>
 
-    <button>Dismiss message</button>
+    <button onclick="togglePage()">Dismiss message</button>
   </div>
 </body>
 
