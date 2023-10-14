@@ -29,13 +29,14 @@ function sendEmail() {
   if (error) return;
 
   const templateParams = {
-    reply_to: email,
+    email_to: email,
   };
 
   emailjs.send(serviceID, templateID, templateParams).then(
     function () {
       togglePage();
       document.querySelector("input#email").value = "";
+      document.querySelector(".success-message b").innerText = email;
     },
     function (error) {
       console.log("FAILED...", error);
